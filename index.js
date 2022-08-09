@@ -10,8 +10,6 @@ if (message) {
 }
 
 function doTheThing(event) {
-    event.preventDefault();
-
     document.querySelector(`#message-form`).classList.add(`hide`);
     document.querySelector(`#link-form`).classList.remove(`hide`);
    
@@ -24,5 +22,6 @@ function doTheThing(event) {
 }
 
 document.querySelector(`form`).addEventListener(`submit`, event => {
+    event.preventDefault();
     doTheThing(event);
 });
