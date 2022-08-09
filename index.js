@@ -26,9 +26,3 @@ function doTheThing(event) {
 document.querySelector(`form`).addEventListener(`submit`, event => {
     doTheThing(event);
 });
-
-document.querySelector(`form`).addEventListener(`keypress`, event => {
-    if (event.key === `Enter`) {
-        doTheThing(event);
-    }
-});
