@@ -5,11 +5,10 @@ const message = atob(hash.replace(`#`, ``));
 if (message) {
     document.querySelector(`#message-form`).classList.add(`hide`);
     document.querySelector(`#message-show`).classList.remove(`hide`);
-
     document.querySelector(`h1`).innerHTML = message;
 }
 
-function doTheThing(event) {
+function doTheThing() {
     document.querySelector(`#message-form`).classList.add(`hide`);
     document.querySelector(`#link-form`).classList.remove(`hide`);
    
@@ -23,5 +22,5 @@ function doTheThing(event) {
 
 document.querySelector(`form`).addEventListener(`submit`, event => {
     event.preventDefault();
-    doTheThing(event);
+    doTheThing();
 });
